@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>рпг</title>
+</head>
+
+<body>
+    <div class="startWindow" id="startwind">
+        <div style="font-size: xx-large; font-family: 'Segoe UI'">
+            Назовите своего бойца:
+        </div>
+        <input class="prompt" maxlength="15" id="warName">
+        <div id="nameError" class="Abshidden" style="font-size: small; font-family: 'Segoe UI'; color: #f44336;">
+            Неужели у вас такое короткое имя?
+        </div>
+        <div class="button confirm" id="confButton">Начать игру</div> 
+    </div>
+    <div class="container Abshidden" id="game">
+        <div id="whichTurn" style="width: fit-content; margin: auto; font-size: 36px; font-family: 'Segoe UI'" ;">Ваш
+            ход
+        </div>
+        <div class="wars">
+            <div id="my_war" class="left war">
+                <span id="myName"></span>
+                <img class="war-img"
+                    src="https://sun9-53.userapi.com/impg/5Lt5U2yy5qJIUOdjrTYwD0iXl786Wbn9R6z5qg/y5NXNNE275c.jpg?size=160x179&quality=96&sign=f0dd3f0d0c7d2b0470dedc01ce56dbe0&type=album">
+
+                <br><span>HP</span>
+                <div class="progressbar">
+                    <div id="myHp" max=20 class="progressbar progress"></div>
+                </div>
+                <span id="myHpCount"></span>
+
+                <div class="stats">
+                    <span id="myDmgCount">DMG: 0</span><br>
+                    <span id="myDefCount">DEF: 0</span>
+                </div>
+
+                <div id="myOptions">
+                    <div id="myattack" style="background-color: #f44336;" class="button">ATTACK</div>
+                    <div id="myHeal" style="background-color: #00bd3f; position: relative;" class="button">
+                        <div id="hpcd" class="CDButton"></div>
+                        <div style="z-index: 3; margin: auto; position: absolute; left: 0; right: 0;"> HEAL </div>
+                    </div>
+                    <div id="myDmgUp" style="background-color: #ff8018;" class="button">DAMAGE UP</div>
+                    <div id="myDefUp" style="background-color: #646464;" class="button">DEFENCE UP</div>
+                    
+                    
+                </div>
+            </div> <br>
+
+
+            <div id="enemy_war" class="right war">
+                <div id="enemyName"></div>
+                <img class="war-img" id="enemyPic"
+                    src="https://sun9-65.userapi.com/impg/QiLx_CF9dvUfq9_T9TOti5ok8YOEM-xF60XAiQ/x2z1kGnyJaE.jpg?size=126x173&quality=96&sign=6e25d81acda1800b584d9456ac28df17&type=album">
+                <br><span>HP</span>
+                <div class="progressbar">
+                    <div id="enemyHp" max=20 class="progressbar progress"></div>
+                </div>
+                <span id="enemyHpCount"></span>
+
+                <div class="stats">
+                    <span id="enemyDmgCount">DMG: 0</span><br>
+                    <span id="enemyDefCount">DEF: 0</span>
+                </div>
+            </div>
+        </div>
+        <div id="history" class="historytab">
+            <div id="messageCreator"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</html>
