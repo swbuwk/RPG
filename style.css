@@ -1,87 +1,4 @@
 html {
-<<<<<<< HEAD
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.wars {
-  margin: auto;
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.container {
-  margin: auto;
-  margin-bottom: 20%;
-  width: 400px;
-}
-
-.war {
-  height: fit-content;
-  width: 170px;
-  margin: 10px;
-  text-align: center;
-}
-
-.progressbar {
-  display: block;
-  background: #cc1035;
-  height: 20px;
-}
-
-.progress {
-  width: 20%;
-  background: #67ce00;
-}
-
-.war-img {
-  display: block;
-  width: 170px;
-  height: 175px;
-  margin: auto;
-}
-
-.stats {
-  background: rgb(189, 189, 189);
-  padding: 3px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.button {
-  height: 21px;
-  border: none;
-  padding: 5px 5px 5px 5px;
-  color: white;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.historytab {
-  height: 200px;
-  padding: 5px;
-  background-color: #ebebeb;
-  display: flex;
-  flex-direction: column-reverse;
-  overflow-y: scroll;
-}
-
-.historytext {
-  padding: 4px;
-  border-top: black solid 1px;
-  margin-left: 8px;
-  font-size: 17px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.startWindow {
-=======
     width: 100%;
     height: 100%;
     display: flex;
@@ -327,58 +244,11 @@ body {
   }
 
 .main-menu {
->>>>>>> 2871b88 (new upd)
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-<<<<<<< HEAD
-.prompt {
-  width: 250px;
-  height: 30px;
-  font-size: 24px;
-  text-align: center;
-  background-color: rgb(209, 209, 209);
-  border: none;
-}
-
-.prompt:focus {
-  outline: none;
-}
-
-.confirm {
-  font-family: "Segoe UI";
-  text-align: center;
-  width: 150px;
-  background-color: #aaaaaa;
-  transition: 0.2s ease;
-  margin-top: 7px;
-}
-
-.confirm:hover {
-  background-color: #777777;
-  transition: 0.2s ease;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.Abshidden {
-  display: none;
-}
-
-.CDButton {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 31px;
-  width: 66%;
-  background-color: #71e200;
-}
-=======
 .main-but {
   width: 200px;
   height: 30px;
@@ -434,4 +304,3 @@ body {
 .options::selection {
     background: transparent;
  }
->>>>>>> 2871b88 (new upd)

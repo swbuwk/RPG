@@ -4,15 +4,11 @@ class Game {
         this.newRound = 0
         this.round = -1
         this.turn = 0
-<<<<<<< HEAD
-        this.enemies = [
-=======
         this.world = -1
         this.enemiesCount=15
         this.worldsCompl = [0,0,0]
         this.enemies = [
             [
->>>>>>> 2871b88 (new upd)
             {
                 name: "Большой жук",
                 hp: 25,
@@ -21,69 +17,16 @@ class Game {
                 hitch: 0.8,
                 critch: 0.2,
                 def: 0,
-<<<<<<< HEAD
-                image: "https://sun9-84.userapi.com/impg/uLkxmUCMVE3pHBXhtyvUjydRAO4kqHHEq7cPHg/lGnnZxgz4-Y.jpg?size=161x135&quality=96&sign=067a051c1c3441b5dad16a703aa48788&type=album",
-            },
-            {
-                name: "Мужчина с вилкой",
-                hp: 30,
-                maxhp: 40,
-=======
                 image: "img/enemies/bug.png",
             },
             {
                 name: "Мужчина с вилой",
                 hp: 35,
                 maxhp: 50,
->>>>>>> 2871b88 (new upd)
                 dmg: 10,
                 hitch: 0.8,
                 critch: 0.3,
                 def: 10,
-<<<<<<< HEAD
-                image: "https://sun9-39.userapi.com/impg/19XUoLoGCumRzvMc2a5388rt2QTRlxEjOK5Otw/ywyX4k1-f5U.jpg?size=141x156&quality=96&sign=b7ce5a8992b881c3c92261699b643c3d&type=album",
-            },
-            {
-                name: "Неизвестный рыцарь",
-                hp: 100,
-                maxhp: 100,
-                dmg: 10,
-                hitch: 0.8,
-                critch: 0,
-                def: 20,
-                image: "https://sun9-29.userapi.com/impg/2mojjjSZeye0CVFuhLo02JH57KCJkMtIY9zcaA/YW1Zpf3gz-U.jpg?size=155x167&quality=96&sign=aff69e3f67250488dac2f81a23b6d85f&type=album",
-            },
-            {
-                name: "Колдун",
-                hp: 100,
-                maxhp: 100,
-                dmg: 30,
-                hitch: 0.9,
-                critch: 0.25,
-                def: 10,
-                image: "https://sun9-23.userapi.com/impg/Z8aPdmXRu5ILyCmtUWoOhfinBHfBaoxG0CLEzA/cRwvOyMH7Jg.jpg?size=118x145&quality=96&sign=2026443c446adfc3febf106a548a8f4c&type=album",
-            },
-            {
-                name: "Раненый великан",
-                hp: 250,
-                maxhp: 1000,
-                dmg: 40,
-                hitch: 0.9,
-                critch: 0.25,
-                def: 0,
-                image: "https://sun9-23.userapi.com/impg/IoIkvq-nrn6AtsIvdUVV4qT2p6uivSbP4uF6fQ/KrMT_v7AnuU.jpg?size=224x289&quality=96&sign=a7306e24c7e1d97d8f3f8f3fb1241c6f&type=album",
-            },
-            {
-                name: "ДЖАМАЛ",
-                hp: 10000,
-                maxhp: 10000,
-                dmg: 100,
-                hitch: 1,
-                critch: 0.25,
-                def: 100,
-                image: "https://sun9-65.userapi.com/impg/QiLx_CF9dvUfq9_T9TOti5ok8YOEM-xF60XAiQ/x2z1kGnyJaE.jpg?size=126x173&quality=96&sign=6e25d81acda1800b584d9456ac28df17&type=album",
-            }
-=======
                 image: "img/enemies/man-with-fork.png",
             },
             {
@@ -221,7 +164,6 @@ class Game {
                 image: "img/enemies/JAMAL-king.png",
             }
             ]
->>>>>>> 2871b88 (new upd)
         ]
     }
 
@@ -231,41 +173,6 @@ class Game {
         div.classList.add("historytext")
         document.body.querySelector("#history").prepend(div)
     }
-<<<<<<< HEAD
-    
-    next_round() {
-        this.turn=0
-        if (myWar.hp === 0) {
-            if (game.round===5) {
-                game.create_message("ДЖАМАЛ - финальный босс бета теста, вряд ли его возможно убить...")
-            }
-            game.create_message("Игра окончена! (перезагрузите страницу)")
-        } else {
-            game.round += 1
-            myWar = new Warrior(
-                warName.value,
-                20*(game.round+1),
-                20*(game.round+1),
-                5*(game.round+1),
-                0.75+0.25*(game.round/game.enemies.length),
-                0+0.5*(game.round/game.enemies.length),
-                5*(game.round+1),
-                "https://sun9-53.userapi.com/impg/5Lt5U2yy5qJIUOdjrTYwD0iXl786Wbn9R6z5qg/y5NXNNE275c.jpg?size=160x179&quality=96&sign=f0dd3f0d0c7d2b0470dedc01ce56dbe0&type=album"
-            )
-            myWar.hp = myWar.maxhp
-            document.querySelector("#myOptions").classList.remove("hidden")
-            enemyWar = new Warrior(
-                game.enemies[game.round].name,
-                game.enemies[game.round].hp,
-                game.enemies[game.round].maxhp,
-                game.enemies[game.round].dmg,
-                game.enemies[game.round].hitch,
-                game.enemies[game.round].critch,
-                game.enemies[game.round].def,
-                game.enemies[game.round].image,
-            )
-            document.querySelector("#enemyPic").src = enemyWar.image
-=======
 
     create_prompt([title,desc]) {
         document.querySelector("#prompTitle").innerHTML = `${title}`
@@ -341,14 +248,11 @@ class Game {
             )
             document.querySelector("#enemyPic").src = enemyWar.image
             document.querySelector("#history").innerHTML = ""
->>>>>>> 2871b88 (new upd)
             game.create_message(`РАУНД ${game.round + 1}  |  ${myWar.name} vs. ${enemyWar.name}`)
             game.update_counter()
         }
     }
 
-<<<<<<< HEAD
-=======
     new_game() {
         if (myWar.hp===0) {
             myWar = baseWar
@@ -358,37 +262,20 @@ class Game {
         game.next_round()
     }
 
->>>>>>> 2871b88 (new upd)
     update_counter() {
         document.querySelector("#myName").innerHTML = myWar.name
         document.querySelector("#enemyName").innerHTML = enemyWar.name
 
-<<<<<<< HEAD
-        document.querySelector("#hpcd").style = `width: ${100*(1-myWar.healCooldown/3)}%`
-    
-        document.querySelector("#myHp").value = myWar.hp
-        document.querySelector("#enemyHp").value = enemyWar.hp
-    
-=======
         document.querySelector("#hpcd").style.width = `${100*(1-myWar.healCooldown/3)}%`
         document.querySelector("#ragecd").style.width = `${100*(1-myWar.rageCooldown/5)}%`
 
         document.querySelector("#myHp").value = myWar.hp
         document.querySelector("#enemyHp").value = enemyWar.hp
 
->>>>>>> 2871b88 (new upd)
         document.querySelector("#myHpCount").innerHTML = `${myWar.hp} / ${myWar.maxhp}`
         document.querySelector("#enemyHpCount").innerHTML = `${enemyWar.hp} / ${enemyWar.maxhp}`
         document.querySelector("#myHp").style = `width: ${myWar.hp / myWar.maxhp * 100}%`
         document.querySelector("#enemyHp").style = `width: ${enemyWar.hp / enemyWar.maxhp * 100}%`
-<<<<<<< HEAD
-    
-        document.querySelector("#myDmgCount").innerHTML = `DMG: ${myWar.dmg}`
-        document.querySelector("#enemyDmgCount").innerHTML = `DMG: ${enemyWar.dmg}`
-    
-        document.querySelector("#myDefCount").innerHTML = `DEF: ${myWar.def}`
-        document.querySelector("#enemyDefCount").innerHTML = `DEF: ${enemyWar.def}`
-=======
 
         document.querySelector("#myDmgCount").innerHTML = `DMG: ${myWar.dmg}`
         document.querySelector("#enemyDmgCount").innerHTML = `DMG: ${enemyWar.dmg}`
@@ -401,7 +288,6 @@ class Game {
 
         document.querySelector("#myCritchCount").innerHTML = `CRIT CHANCE: ${Math.round(myWar.critch*100)}%`
         document.querySelector("#enemyCritchCount").innerHTML = `CRIT CHANCE: ${enemyWar.critch*100}%`
->>>>>>> 2871b88 (new upd)
     }
 
     myTurn(option) {
@@ -422,15 +308,6 @@ class Game {
                 myWar.heal()
                 break
                 }
-<<<<<<< HEAD
-        }
-        this.turn++
-        if (myWar.healCooldown>0) myWar.healCooldown--
-        game.update_counter()
-        if (!this.newRound) {
-            document.querySelector("#myOptions").classList.add("hidden")
-            document.querySelector("#whichTurn").innerHTML = "Ход противника"
-=======
             case "rage":
                 if (myWar.rageCooldown>0) {
                     return
@@ -449,16 +326,11 @@ class Game {
         if (!this.newRound) {
             document.querySelectorAll(".button").forEach(el => el.style.transition = "0s")
             document.querySelector("#myOptions").classList.add("hidden")
->>>>>>> 2871b88 (new upd)
             setTimeout(game.enemyTurn, 1500)
         }
         this.newRound = 0
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 2871b88 (new upd)
     enemyTurn() {
         if (enemyWar.healCooldown>0) enemyWar.healCooldown--
         this.choice = Math.random()
@@ -468,11 +340,6 @@ class Game {
             enemyWar.dmgbuff()
         } else {
             enemyWar.attack(myWar)
-<<<<<<< HEAD
-        }
-        document.querySelector("#whichTurn").innerHTML = "Ваш ход"
-        document.querySelector("#myOptions").classList.remove("hidden")
-=======
             if ((enemyWar.name==="Огненный скорпион" || enemyWar.name==="Огромный сфинкс") && Math.random()<0.1 && myWar.posionDebuffDur===0) {
                 enemyWar.posionDebuff("enemy", myWar, 5)
             }
@@ -493,7 +360,6 @@ class Game {
             document.querySelector("#myOptions").classList.remove("hidden")
             document.querySelector("#action").style.transition = "0.4s"
         }
->>>>>>> 2871b88 (new upd)
         game.update_counter()
     }
 }
@@ -509,8 +375,6 @@ class Warrior {
         this.def = def // defence
         this.image = image
         this.healCooldown = 3
-<<<<<<< HEAD
-=======
         this.rageCooldown = 5
         this.isRage=0
         this.posionDebuffDur=0
@@ -563,27 +427,17 @@ class Warrior {
             }
             
         }
->>>>>>> 2871b88 (new upd)
     }
 
     attack(enemy) {
         let damage = 0
         if (Math.random() < this.hitch) {
-<<<<<<< HEAD
-            if (Math.round(this.dmg - enemy.def ** 0.95) > 0) {
-                if (Math.random() < this.critch) {
-                    damage = Math.round(2 * (this.dmg - enemy.def ** 0.95))
-                    game.create_message(`${this.name} нанес критический урон! (${damage} ед.)`)
-                } else {
-                    damage = Math.round(this.dmg - enemy.def ** 0.95)
-=======
             if (Math.round(this.dmg - enemy.def ** 0.97) > 0) {
                 if (Math.random() < this.critch) {
                     damage = Math.round(1.5 * ((this.isRage ? 2 : 1) * this.dmg - enemy.def ** 0.97))
                     game.create_message(`${this.name} нанес критический урон! (${damage} ед.)`)
                 } else {
                     damage = Math.round((this.isRage ? 2 : 1) * this.dmg - enemy.def ** 0.97)
->>>>>>> 2871b88 (new upd)
                     game.create_message(`${this.name} нанес ${damage} ед. урона`)
                 }
                 enemy.hp -= damage
@@ -591,18 +445,6 @@ class Warrior {
         } else {
             game.create_message(`${this.name} промазал...`)
         }
-<<<<<<< HEAD
-        if (enemy.hp <= 0) {
-            enemy.hp = 0
-            game.create_message(`${this.name} победил!`)
-            document.querySelector("#myOptions").classList.add("hidden")
-            game.newRound = 1
-            if (game.round===5 && myWar.hp!==0) {
-                game.create_message("Вы прошли бета тест!")
-            } else {
-            setTimeout(game.next_round, 5000)
-            }
-=======
         this.isRage=0
         if (enemy === myWar) {
             document.querySelector("#enemyPic").classList.toggle("right-attack-anim")
@@ -618,22 +460,10 @@ class Warrior {
             document.querySelector("#myOptions").classList.add("hidden")
             game.newRound = 1
             setTimeout(game.next_round, 5000)
->>>>>>> 2871b88 (new upd)
         }
     }
 
     defbuff() {
-<<<<<<< HEAD
-        game.create_message(`${this.name} повысил свою защиту! (${this.def} --> ${this.def += 1 + Math.round(Math.random() * 4)} ед.)`)
-    }
-
-    dmgbuff() {
-        game.create_message(`${this.name} повысил свой урон! (${this.dmg} --> ${this.dmg += 1 + Math.round(Math.random() * 5)} ед.)`)
-    }
-
-    heal() {
-        let heal = Math.round((Math.random()+0.6)*0.5*(this.maxhp-this.hp))
-=======
         game.create_message(`${this.name} повысил свою защиту! (${this.def} --> ${this.def += Math.round((game.world+1)**2.25) + Math.round(2*Math.random())} ед.)`)
     }
 
@@ -643,17 +473,10 @@ class Warrior {
 
     heal() {
         let heal = Math.round((Math.random()/5+0.9)*0.5*(this.maxhp-this.hp))
->>>>>>> 2871b88 (new upd)
         game.create_message(`${this.name} восстановил ${heal} ед. здоровья`)
         this.hp += heal
         this.healCooldown = 4
     }
-<<<<<<< HEAD
-}
-
-const game = new Game()
-let myWar = new Warrior("", 1, 0, 0, 0, 0, 0, "")
-=======
 
     rage() {
         game.create_message(`${this.name} использовал ярость! Его следующая атака нанесет удвоенный урон!`)
@@ -674,29 +497,20 @@ let baseWar = new Warrior(
     "img/knight.png",
     )
 let myWar = baseWar
->>>>>>> 2871b88 (new upd)
 let enemyWar = new Warrior("", 1, 0, 0, 0, 0, 0, "")
 
 document.querySelector("#confButton").onclick = () => {
     warName = document.querySelector("#warName")
     if (`${warName.value}`.length>=2) {
         document.querySelector("#startwind").classList.add("Abshidden")
-<<<<<<< HEAD
-        document.querySelector("#game").classList.remove("Abshidden")
-        myWar.name = warName.value
-        game.next_round()
-=======
         document.querySelector(".main-menu").classList.remove("Abshidden")
         myWar.name = warName.value
         document.querySelector(".hello").innerHTML = `Привет, ${myWar.name}!`
->>>>>>> 2871b88 (new upd)
     } else {
         document.querySelector("#nameError").classList.remove("Abshidden")
     }
 }
 
-<<<<<<< HEAD
-=======
 document.querySelector("#game_start").onclick = () => {
     game.hide_all()
     document.querySelector(".island-menu").classList.remove("Abshidden")
@@ -730,7 +544,6 @@ document.querySelector("#game_help").onclick = () => {
     document.querySelector("#game_to_menu").classList.remove("Abshidden")
 }
 
->>>>>>> 2871b88 (new upd)
 document.querySelector("#myattack").onclick = () => {
     game.myTurn("attack")
 }
@@ -743,11 +556,6 @@ document.querySelector("#myHeal").onclick = () => {
     game.myTurn("heal")
 }
 
-<<<<<<< HEAD
-document.querySelector("#myDmgUp").onclick = () => {
-    game.myTurn("dmgUp")
-}
-=======
 document.querySelector("#myRage").onclick = () => {
     game.myTurn("rage")
 }
@@ -783,4 +591,3 @@ document.querySelectorAll(".island")[2].onclick = () => {
 document.querySelector("#action").onclick = () => {
     document.querySelector("#action").classList.toggle('action-option-active');
 }
->>>>>>> 2871b88 (new upd)
